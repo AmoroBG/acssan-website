@@ -2,10 +2,17 @@ import React from "react";
 import { useState } from "react";
 import { IoIosMenu } from "react-icons/io";
 import { IoCloseSharp } from "react-icons/io5";
-import sateconsultLogo from "../assets/sateconsultLogo.png";
+import acssanLogo from "../assets/acssanLogo.png";
 import MobileMenu from "./MobileMenu";
 
-const Header = ({ home, about, programs, contact, scrollToSection }) => {
+const Header = ({
+  home,
+  about,
+  programs,
+  partners,
+  contact,
+  scrollToSection,
+}) => {
   const [clickHamburger, setClickHamburger] = useState(false);
 
   const closeMobileMenu = () => {
@@ -17,7 +24,7 @@ const Header = ({ home, about, programs, contact, scrollToSection }) => {
       <nav>
         <div className="brand">
           <a href="#">
-            <img src={sateconsultLogo} alt="ACSSAN Logo" className="logo" />
+            <img src={acssanLogo} alt="ACSSAN Logo" className="logo" />
           </a>
         </div>
         <ul className="menu">
@@ -29,6 +36,9 @@ const Header = ({ home, about, programs, contact, scrollToSection }) => {
           </li>
           <li onClick={() => scrollToSection(programs)}>
             <a href="#programs">Programs</a>
+          </li>
+          <li onClick={() => scrollToSection(partners)}>
+            <a href="#partners">Partners</a>
           </li>
           <li onClick={() => scrollToSection(contact)}>
             <a href="#contact">Contact</a>
